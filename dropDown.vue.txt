@@ -1,0 +1,28 @@
+<template>
+    <div class="">
+        <p>Select the genre of food you'd like to eat below.</p>
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>Mexican</option>
+            <option>Italien</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+</template>
+
+<script>
+
+export default {
+    // name: 'DropDown',
+    data: {
+        selected: ''
+    }
+}
+
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
