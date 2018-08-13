@@ -1,0 +1,12 @@
+Restaurant
+inc     id
+text    name
+text    genre
+text    address
+
+Food
+inc     id
+text    name
+text    genre
+text    type
+
