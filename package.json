@@ -1,15 +1,22 @@
 {
-  "name": "CRAV_BE",
+  "name": "crav_be",
   "version": "1.0.0",
-  "description": "Backend for out group project",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
-    },
-  "keywords": [],
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piferdg/CRAV_BE.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piferdg/CRAV_BE/issues"
+  },
+  "homepage": "https://github.com/piferdg/CRAV_BE#readme",
   "dependencies": {
     "express": "^4.16.3",
     "knex": "^0.15.2",
