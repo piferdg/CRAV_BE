@@ -1,26 +1,26 @@
 // db = crav
 // table = restaurant
 
-const express = require("express");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const app = express();
+const express = require('express')
+const bodyParser = require('body-parser')
+const morgan = require('morgan')
+const app = express()
 const queries = require('./queries')
 
 // const coffees = require("./routes/games");
 
 // app.use("/games", coffees);
 
-app.use(morgan('dev'));
-app.use(bodyParser.json());
+app.use(morgan('dev'))
+app.use(bodyParser.json())
 
-app.get("/", (request, response, next) => {
-    queries.list()
-    .then(games => {
-        response.json({games});
+app.get('/', (request, response, next) => {
+  queries.list()
+    .then(restaurants => {
+      response.json({restaurants})
     })
-    .catch(next);
-});
+    .catch(next)
+})
 
 // router.get("/", (request, response, next) => {
 //     queries.list()
@@ -32,19 +32,19 @@ app.get("/", (request, response, next) => {
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-    const err = new Error("Not Found");
-    err.status = 404;
-    next(err);
-});
+  const err = new Error('Not Found')
+  err.status = 404
+  next(err)
+})
 
 // error handler
 app.use((err, req, res, next) => {
-    res
+  res
     .status(err.status || 500)
     .json({
       message: err.message,
-      error: req.app.get("env") === "development" ? err.stack : {}
-    });
-});
+      error: req.app.get('env') === 'development' ? err.stack : {},
+    })
+})
 
-module.exports = app;
+module.exports = app
