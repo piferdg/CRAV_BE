@@ -1,17 +1,11 @@
-// db = crav
-// table = restaurant
-
 const express = require('express')
 const bodyParser = require('body-parser')
-const morgan = require('morgan')
+
 const app = express()
 const queries = require('./queries')
 
-// const coffees = require("./routes/games");
 
-// app.use("/games", coffees);
 
-app.use(morgan('dev'))
 app.use(bodyParser.json())
 
 app.get('/', (request, response, next) => {
@@ -22,13 +16,7 @@ app.get('/', (request, response, next) => {
     .catch(next)
 })
 
-// router.get("/", (request, response, next) => {
-//     queries.list()
-//     .then(games => {
-//         response.json({games});
-//     })
-//     .catch(next);
-// });
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

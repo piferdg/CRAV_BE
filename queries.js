@@ -4,6 +4,7 @@ module.exports = {
   list(){
     return database('restaurant')
   },
+
   read(id){
     return database('restaurant')
       .select().where('id', id)
