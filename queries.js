@@ -1,8 +1,21 @@
 const database = require("./database-connection");
+const knex = require('knex')
 
 module.exports = {
     list(){
         return database('restaurant')
+    },
+    getMexican(){
+        return database('restaurant')
+        .select().where('genre', 'Mexican')
+    },
+    getItalian(){
+        return database('restaurant')
+        .select().where('genre', 'Italian')
+    },
+    getAmerican(){
+        return database('restaurant')
+        .select().where('genre', 'American')
     },
     read(id){
         return database('restaurant')

@@ -14,4 +14,4 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       return knex.raw('ALTER SEQUENCE restaurant_id_seq RESTART WITH 6;')
     })
-}
+ }

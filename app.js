@@ -14,13 +14,42 @@ const queries = require('./queries')
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+// routes ---------------------------------------------------------------------------------
+
 app.get("/", (request, response, next) => {
     queries.list()
     .then(games => {
         response.json({games});
     })
     .catch(next);
-});
+})
+
+app.get("/mexican", (request, response, next) => {
+    queries.getMexican()
+    .then(games => {
+        response.json({games});
+    })
+    .catch(next);
+})
+
+app.get("/italien", (request, response, next) => {
+    queries.getMexican()
+    .then(games => {
+        response.json({games});
+    })
+    .catch(next);
+})
+
+app.get("/american", (request, response, next) => {
+    queries.getAmerican()
+    .then(games => {
+        response.json({games});
+    })
+    .catch(next);
+})
+
+
+// end of routes ---------------------------------------------------------------------------------
 
 // router.get("/", (request, response, next) => {
 //     queries.list()
