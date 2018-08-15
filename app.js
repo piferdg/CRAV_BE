@@ -16,7 +16,21 @@ app.get('/', (request, response, next) => {
     .catch(next)
 })
 
+app.get('/genre', (request, response, next) => {
+  queries.genreList()
+    .then(genre => {
+      response.json({genre})
+    })
+    .catch(next)
+})
 
+app.get("/genre/:genre", (request, response, next) => {
+  queries.getGenre(request.params.genre)
+  .then(genre => {
+      response.json({genre});
+  })
+  .catch(next);
+})
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

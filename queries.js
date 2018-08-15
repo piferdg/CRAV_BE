@@ -8,22 +8,15 @@ module.exports = {
   read(id){
     return database('restaurant')
       .select().where('id', id)
-  },/*
-  create(game){
-    return database('restaurant')
-      .insert(game)
-      .then(record => record[0])
   },
-  update(id, game){
-    return database('restaurant')
-      .update(game)
-      .where('id', id)
-      .returning('*')
-      .then(record => record[0])
+  
+  genreList(){
+    return database('genre')
   },
-  delete(id){
+
+  getGenre(genre){
     return database('restaurant')
-      .where('id', id)
-      .del()
-  },*/
+    .join('genre', 'restaurant.genre', '=', 'genre.id')
+    .select().where('genre.id', genre)
+  },
 }
