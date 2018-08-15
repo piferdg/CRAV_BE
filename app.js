@@ -4,8 +4,6 @@ const bodyParser = require('body-parser')
 const app = express()
 const queries = require('./queries')
 
-
-
 app.use(bodyParser.json())
 
 app.get('/', (request, response, next) => {
