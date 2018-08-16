@@ -6,9 +6,7 @@ exports.up = function(knex, Promise) {
     table.integer('genre')
     table.text('address')
     table.text('phoneNumber')
-    table.decimal('latitude')
-    table.decimal('longitude')
-
+    table.text('www')
   })
 }
 
