@@ -6,6 +6,9 @@ const queries = require('./queries')
 
 app.use(bodyParser.json())
 
+const cors = require("cors")
+app.use(cors())
+
 app.get('/', (request, response, next) => {
   queries.list()
     .then(restaurants => {
