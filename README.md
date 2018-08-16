@@ -4,7 +4,7 @@ This API provides three different genres of food, including Mexican, Italian, an
 ## Instructions
 To use this API,there are different routes that could be used depending on the data that is needed. Some include: genre/(foodgenre), genre.
 
-
+```-npm install knex express pg cors```
 
 
 ## API Link:
