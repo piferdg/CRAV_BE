@@ -5,7 +5,7 @@ This API provides three different genres of food, including Mexican, Italian, an
 To use this API,there are different routes that could be used depending on the data that is needed. Some include: genre/(foodgenre), genre.
 
 -```npm install```
--```npm install knex express pg cors```
+-```npm run dev```
 
 ## API Link:
 https://crav.herokuapp.com/
